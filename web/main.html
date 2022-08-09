@@ -8,9 +8,16 @@
     <title>Youtube Video Downloader</title>
 </head>
 <body>
-    <h1>Youtube Video Downloader</h1>
-    <p>- By Sandesh Jangir</p>
+    <input type="text" id="url" placeholder="Paste URL Here">
+    <button onclick="submit()">Download</button>
 
     <script src="/eel.js"></script>
+    <script>
+        function submit(){
+            console.log("hello")
+            url = document.getElementById('url').value;
+            console.log(url)
+        }
+    </script>
 </body>
 </html>
