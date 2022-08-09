@@ -15,8 +15,13 @@
     <script>
         function submit(){
             console.log("hello")
-            url = document.getElementById('url').value;
+            var url = document.getElementById('url').value;
             console.log(url)
+            async function run(){
+                console.log("runned")
+                main = await eel.download_video(url)(url);
+            }
+            run();
         }
     </script>
 </body>
