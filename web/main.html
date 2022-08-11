@@ -8,17 +8,21 @@
     <title>Youtube Video Downloader</title>
 </head>
 <body>
+    <!-- Creating The Form -->
     <input type="text" id="url" placeholder="Paste URL Here">
     <button onclick="submit()">Download</button>
 
     <script src="/eel.js"></script>
+
+    <!-- Custom Javascript -->
     <script>
+
         function submit(){
-            console.log("hello")
+            // fetching the value from input
             var url = document.getElementById('url').value;
-            console.log(url)
+
+            // Calling "Download function" from python backend
             async function run(){
-                console.log("runned")
                 main = await eel.download_video(url)(url);
             }
             run();
